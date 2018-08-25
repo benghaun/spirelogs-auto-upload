@@ -3,6 +3,7 @@ This is a command line tool for automatic uploading of Slay the Spire run files 
 
 In order to use this tool, enter your Spirelogs username, Spirelogs password, and path to run files in config.py. Username and password can be left as `None` if you wish to upload your runs anonymously. 
 You also need to install the requirements:
+
 `pip install -r requirements.txt`
 
 This tool does two things: the first of which is to upload all existing run files. To do so, run main.py with the --upload flag:
