@@ -37,6 +37,12 @@ if __name__ == '__main__':
 		observer = Observer()
 		observer.schedule(handler, directory_to_files, recursive=True)
 		observer.start()
+		try:
+			while True:
+				time.sleep(1)
+		except KeyboardInterrupt:
+			print("Stopping...")
+			observer.stop()
 		observer.join()
 
 						
