@@ -1,7 +1,7 @@
 # spirelogs-auto-upload
 This is a command line tool for automatic uploading of Slay the Spire run files to Spirelogs built using Python. It is basically a simpler version of Zurkei's implementation (located at https://github.com/Zurkei/SpireLogsUploader). Zurkei's implementation has a GUI while this version is purely CLI. 
 
-##Installation and configuration
+## Installation and configuration
 This tool has been tested to run on Python 3.6. 
 
 
@@ -11,7 +11,7 @@ You also need to install the requirements:
 
 `pip install -r requirements.txt`
 
-##Usage
+## Usage
 
 This tool does two things: the first of which is to upload all existing run files. To do so, run main.py with the --upload flag:
 
