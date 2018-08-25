@@ -14,4 +14,4 @@ The other is to automatically upload new run files whenever they are created (i.
 
 `python main.py`
 
-The recommended method to use this tool would be to configure this process to run in the background all the time, which can be done using the Windows Task Scheduler for Windows (configure the script to run on startup) or Supervisor for Unix/Linux systems. 
+The recommended method to use this tool would be to configure this process to run in the background all the time, which can be done using the Task Scheduler for Windows (configure the script to run on startup) or Supervisor for Unix/Linux systems. 
