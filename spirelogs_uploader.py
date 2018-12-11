@@ -1,18 +1,18 @@
 import requests
 import logging
-try:
-    import http.client as http_client
-except ImportError:
-    # Python 2
-    import httplib as http_client
-http_client.HTTPConnection.debuglevel = 1
+# try:
+#     import http.client as http_client
+# except ImportError:
+#     # Python 2
+#     import httplib as http_client
+# http_client.HTTPConnection.debuglevel = 1
 
 # You must initialize logging, otherwise you'll not see debug output.
-logging.basicConfig()
-logging.getLogger().setLevel(logging.DEBUG)
-requests_log = logging.getLogger("requests.packages.urllib3")
-requests_log.setLevel(logging.DEBUG)
-requests_log.propagate = True
+# logging.basicConfig()
+# logging.getLogger().setLevel(logging.DEBUG)
+# requests_log = logging.getLogger("requests.packages.urllib3")
+# requests_log.setLevel(logging.DEBUG)
+# requests_log.propagate = True
 
 class SpirelogsUploader():
 	def __init__(self, username=None, password=None):
@@ -32,7 +32,8 @@ class SpirelogsUploader():
 
 	def upload_run(self, file):
 		file = {'file': file}
-		response = requests.post("https://spirelogs.com/multiupload.php", files=file, cookies=self.cookies)
+		response = requests.post("https://spirelogs.com/multiupload.php", files=file, cookies=self.cookies,
+								 headers={'host': 'spirelogs.com', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0'})
 		if 'successfully' in response.text or 'recorded' in response.text:
 			return True
 		else:
